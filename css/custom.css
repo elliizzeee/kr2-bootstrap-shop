@@ -1,0 +1,90 @@
+/* ===== База ===== */
+body {
+  min-height: 100vh;
+}
+
+.placeholder-box {
+  min-height: 240px;
+}
+
+/* ===== Палитра «Лесная гавань» ===== */
+:root {
+  --bs-primary: #1b4d2e;          /* тёмно-еловый */
+  --bs-primary-rgb: 27, 77, 46;
+  --bs-link-color: #1b4d2e;
+  --bs-link-hover-color: #0f331c;
+}
+
+/* Кнопки primary */
+.btn-primary {
+  --bs-btn-bg: #1b4d2e;
+  --bs-btn-border-color: #1b4d2e;
+  --bs-btn-hover-bg: #0f331c;
+  --bs-btn-hover-border-color: #0f331c;
+  --bs-btn-active-bg: #0a2413;
+  --bs-btn-active-border-color: #0a2413;
+  --bs-btn-color: #ffffff;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-active-color: #ffffff;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #1b4d2e;
+  --bs-btn-border-color: #1b4d2e;
+  --bs-btn-hover-bg: #1b4d2e;
+  --bs-btn-hover-border-color: #1b4d2e;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-active-bg: #0f331c;
+  --bs-btn-active-border-color: #0f331c;
+  --bs-btn-active-color: #ffffff;
+}
+
+.text-primary {
+  color: #1b4d2e !important;
+}
+
+/* ===== Бежевый вместо чёрного/тёмного ===== */
+.bg-dark {
+  background-color: #d9c7a7 !important;   /* бежевый */
+  color: #2b2b2b !important;              /* тёмный текст для читаемости */
+}
+
+/* Navbar на бежевом */
+.navbar-dark {
+  --bs-navbar-color: #2b2b2b;
+  --bs-navbar-hover-color: #1b4d2e;
+  --bs-navbar-active-color: #1b4d2e;
+  --bs-navbar-brand-color: #1b4d2e;
+  --bs-navbar-brand-hover-color: #0f331c;
+  --bs-navbar-toggler-border-color: rgba(43, 43, 43, 0.3);
+}
+
+/* Иконка мобильного меню — тёмная, чтобы была видна на бежевом */
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(43,43,43,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Подвал на бежевом */
+footer.bg-dark {
+  color: #2b2b2b !important;
+}
+
+footer .text-white {
+  color: #2b2b2b !important;
+}
+
+footer a {
+  color: #1b4d2e !important;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #0f331c !important;
+  text-decoration: underline;
+}
+
+/* Активный пункт меню */
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #1b4d2e;
+  font-weight: 600;
+}
