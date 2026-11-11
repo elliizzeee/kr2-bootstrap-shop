@@ -3,141 +3,290 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лесная гавань — загородный комплекс для семейного отдыха</title>
+  <title>Wood & Resin — Лесная мастерская и глэмпинг</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
 
   <!-- Шапка -->
-  <header class="bg-primary text-white py-4">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 col-md-8">
-          <h1 class="h3 mb-1">Лесная гавань</h1>
-          <p class="mb-0 opacity-75">Загородный комплекс для семейного отдыха</p>
-        </div>
-        <div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
-          <span class="badge bg-light text-primary">КР №2</span>
-        </div>
-      </div>
+  <header class="bg-primary text-white py-5 text-center border-bottom border-secondary">
+    <div class="container py-3">
+      <h1 class="display-4 fw-bold mb-2">Wood & Resin</h1>
+      <p class="fs-4 mb-0 text-muted">Лесная эко-мастерская и отдых на природе</p>
     </div>
   </header>
 
   <!-- Навигация -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Лесная гавань</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
-          <li class="nav-item"><a class="nav-link" href="catalog.html">Домики</a></li>
-          <li class="nav-item"><a class="nav-link" href="product.html">Домик</a></li>
+          <li class="nav-item"><a class="nav-link" href="houses.html">Домики</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Мастер-классы</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
           <li class="nav-item"><a class="nav-link" href="order.html">Бронирование</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Магазин</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Главный блок -->
   <main>
     <section class="container my-5">
       <div class="row align-items-center g-4">
         <div class="col-12 col-lg-6">
-          <h2 class="display-5 fw-bold">Отдых на природе для всей семьи</h2>
+          <h2 class="display-5 fw-bold">Создайте шедевр из дерева и смолы</h2>
           <p class="lead text-muted">
-            Уютные домики, баня, озеро и активные развлечения — сапы, конные прогулки и лесные маршруты.
+            Приезжайте на выходные в наши уютные домики, дышите свежим воздухом и создавайте уникальные изделия из дерева и эпоксидной смолы на авторских мастер-классах
           </p>
-          <a class="btn btn-primary btn-lg" href="catalog.html">Выбрать домик</a>
+          <a class="btn btn-primary btn-lg mt-3" href="catalog.html">Выбрать мастер-класс</a>
         </div>
         <div class="col-12 col-lg-6">
-          <div class="placeholder-box p-5 bg-light border rounded text-center">
-            <p class="mb-0 text-muted">Здесь будет фото комплекса или промо-баннер</p>
-          </div>
+          <img src="images/photo1.jpg" class="img-fluid rounded shadow-lg border border-secondary" alt="Лесная мастерская" style="object-fit: cover; width: 100%; max-height: 600px;" onerror="this.src='https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1000&auto=format&fit=crop'">
         </div>
       </div>
     </section>
 
     <!-- Преимущества -->
     <section class="container my-5">
-      <h2 class="text-center mb-4">Почему «Лесная гавань»</h2>
+      <h2 class="text-center mb-5">Почему выбирают нас</h2>
       <div class="row g-4">
         <div class="col-12 col-md-4">
-          <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Природа и тишина</h3>
-            <p class="mb-0 text-muted">Комплекс расположен в лесу у озера, вдали от городского шума.</p>
+          <div class="card h-100 p-4">
+            <h3 class="h5 mb-3">Отдых с пользой</h3>
+            <p class="mb-0 text-muted">Совместите спокойный семейный отдых в лесу с созданием уникальных вещей своими руками. Идеальный перезапуск на выходные.</p>
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Для всей семьи</h3>
-            <p class="mb-0 text-muted">Домики разной вместимости, детская площадка и развлечения для детей.</p>
+          <div class="card h-100 p-4">
+            <h3 class="h5 mb-3">Магия эпоксидной смолы</h3>
+            <p class="mb-0 text-muted">Освойте работу с деревом и современными материалами. Создайте свой стол или панно и заберите домой частичку леса.</p>
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="p-4 border rounded h-100 bg-white">
-            <h3 class="h5">Активный отдых</h3>
-            <p class="mb-0 text-muted">Сапборды, конные прогулки, велосипеды, рыбалка и экскурсии.</p>
+          <div class="card h-100 p-4">
+            <h3 class="h5 mb-3">Мастера своего дела</h3>
+            <p class="mb-0 text-muted">Даже если вы впервые держите инструмент в руках — наши наставники помогут, подскажут и вдохновят на шедевр.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Популярные домики -->
+    <!-- Популярные мастер-классы (3 штуки) -->
     <section class="container my-5">
       <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="mb-0">Популярные домики</h2>
-        <a class="btn btn-outline-primary" href="catalog.html">Все домики</a>
+        <h2 class="mb-0">Популярные мастер-классы</h2>
+        <a class="btn btn-outline-primary" href="catalog.html">Все занятия</a>
       </div>
-      <div class="row g-4">
+      
+      <div class="row g-4 justify-content-center">
+        <!-- Карточка 1: Журнальный столик -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-success mb-3">Семейный</span>
-            <h3 class="h5">Домик «Сосна»</h3>
-            <p class="text-muted">Двухэтажный домик для семьи с детьми, до 6 человек.</p>
-            <p class="fw-bold mb-3">6 500 руб./ночь</p>
-            <a class="btn btn-primary" href="product.html">Подробнее</a>
+          <div class="card h-100 shadow-sm">
+            <img src="images/stol1.jpg" class="card-img-top" alt="Столик" onerror="this.src='https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=600'">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="h5 card-title mb-0">Журнальный столик</h3>
+              </div>
+              <p class="card-text text-muted small mb-3">Создайте столик с эффектом океана или лесного озера на деревянной основе.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3" style="color: #e6b97d;">15 000 руб.</p>
+              <a class="btn btn-primary w-100" href="product-stol.html">Подробнее</a>
+            </div>
           </div>
         </div>
+
+        <!-- Карточка 2: Часы -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-warning text-dark mb-3">С баней</span>
-            <h3 class="h5">Коттедж «Озеро»</h3>
-            <p class="text-muted">Просторный коттедж с баней и выходом к воде, до 8 человек.</p>
-            <p class="fw-bold mb-3">9 800 руб./ночь</p>
-            <a class="btn btn-primary" href="product.html">Подробнее</a>
+          <div class="card h-100 shadow-sm">
+            <img src="images/clock.jpg" class="card-img-top" alt="Часы" onerror="this.src='https://images.unsplash.com/photo-1507646870364-27a4bfbd4c27?q=80&w=600'">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="h5 card-title mb-0">Часы из смолы</h3>
+              </div>
+              <p class="card-text text-muted small mb-3">Создайте уникальный интерьерный аксессуар, который будет радовать глаз каждый день.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3" style="color: #e6b97d;">7 000 руб.</p>
+              <a class="btn btn-primary w-100" href="product-clock.html">Подробнее</a>
+            </div>
           </div>
         </div>
+
+        <!-- Карточка 3: Роспись по дереву -->
         <div class="col-12 col-md-6 col-lg-4">
-          <div class="border rounded h-100 p-4">
-            <span class="badge bg-danger mb-3">Хит</span>
-            <h3 class="h5">Домик «Ель»</h3>
-            <p class="text-muted">Компактный домик для пары или небольшой семьи, до 3 человек.</p>
-            <p class="fw-bold mb-3">4 200 руб./ночь</p>
-            <a class="btn btn-primary" href="product.html">Подробнее</a>
+          <div class="card h-100 shadow-sm">
+            <img src="images/risunok1.jpg" class="card-img-top" alt="Роспись" onerror="this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=600'">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="h5 card-title mb-0">Роспись по дереву</h3>
+              </div>
+              <p class="card-text text-muted small mb-3">Освойте технику художественной росписи и создайте уникальное панно своими руками.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3" style="color: #e6b97d;">1 500 руб.</p>
+              <a class="btn btn-primary w-100" href="product-risunok.html">Подробнее</a>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <!-- Отзывы (Карусель) -->
+    <section class="container my-5">
+      <h2 class="text-center mb-5" style="color: #f5e6d3; text-shadow: 0 0 10px rgba(245,230,211,0.5);">Отзывы наших гостей</h2>
+      
+      <!-- Убрали свечение у карточек, заменив .card на .bg-dark -->
+      <div id="reviewsCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner pb-5">
+          
+          <!-- Слайд 1 -->
+          <div class="carousel-item active">
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-dark p-4 h-100 rounded border border-secondary">
+                  <div class="mb-3" style="color: #e6b97d; font-size: 1.5rem; line-height: 1;">🌲🌲🌲🌲🌲</div>
+                  <p class="text-muted fst-italic">"Приехали на выходные, сделали потрясающий стол! Дети в восторге, домик уютный. Обязательно вернемся!"</p>
+                  <div class="d-flex align-items-center mt-auto pt-3 border-top border-secondary">
+                    <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background-color: #e6b97d; color: #1a211e; font-weight: bold; font-size: 1.2rem;">Е</div>
+                    <div><strong style="color: #f5e6d3;">Екатерина</strong><br><small class="text-muted">Стол из слэба</small></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-dark p-4 h-100 rounded border border-secondary">
+                  <div class="mb-3" style="color: #e6b97d; font-size: 1.5rem; line-height: 1;">🌲🌲🌲🌲🌲</div>
+                  <p class="text-muted fst-italic">"Идеальное место, чтобы перезагрузиться. Мастер-класс по эпоксидке — это что-то невероятное."</p>
+                  <div class="d-flex align-items-center mt-auto pt-3 border-top border-secondary">
+                    <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background-color: #e6b97d; color: #1a211e; font-weight: bold; font-size: 1.2rem;">Д</div>
+                    <div><strong style="color: #f5e6d3;">Дмитрий</strong><br><small class="text-muted">Часы из смолы</small></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-dark p-4 h-100 rounded border border-secondary">
+                  <div class="mb-3" style="color: #e6b97d; font-size: 1.5rem; line-height: 1;">🌲🌲🌲🌲🌲</div>
+                  <p class="text-muted fst-italic">"Брали домик A-frame с чаном. Ночью сидели в горячей воде, смотрели на звёзды. Волшебство!"</p>
+                  <div class="d-flex align-items-center mt-auto pt-3 border-top border-secondary">
+                    <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background-color: #e6b97d; color: #1a211e; font-weight: bold; font-size: 1.2rem;">А</div>
+                    <div><strong style="color: #f5e6d3;">Анна и Сергей</strong><br><small class="text-muted">A-frame</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Слайд 2 -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-dark p-4 h-100 rounded border border-secondary">
+                  <div class="mb-3" style="color: #e6b97d; font-size: 1.5rem; line-height: 1;">🌲🌲🌲🌲🌲</div>
+                  <p class="text-muted fst-italic">"Делали ключницу с дочкой. Она в полном восторге, что сама залила смолу. Очень безопасно и интересно."</p>
+                  <div class="d-flex align-items-center mt-auto pt-3 border-top border-secondary">
+                    <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background-color: #e6b97d; color: #1a211e; font-weight: bold; font-size: 1.2rem;">О</div>
+                    <div><strong style="color: #f5e6d3;">Ольга</strong><br><small class="text-muted">Ключница</small></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-dark p-4 h-100 rounded border border-secondary">
+                  <div class="mb-3" style="color: #e6b97d; font-size: 1.5rem; line-height: 1;">🌲🌲🌲🌲🌲</div>
+                  <p class="text-muted fst-italic">"Купили в магазине готовый стол. Качество невероятное, все швы идеальные. Смотрится как дизайнерская вещь."</p>
+                  <div class="d-flex align-items-center mt-auto pt-3 border-top border-secondary">
+                    <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background-color: #e6b97d; color: #1a211e; font-weight: bold; font-size: 1.2rem;">М</div>
+                    <div><strong style="color: #f5e6d3;">Михаил</strong><br><small class="text-muted">Магазин</small></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-dark p-4 h-100 rounded border border-secondary">
+                  <div class="mb-3" style="color: #e6b97d; font-size: 1.5rem; line-height: 1;">🌲🌲🌲🌲🌲</div>
+                  <p class="text-muted fst-italic">"Тишина, лес, свежий воздух. Сделали подсвечники, теперь дома создают уют. Обязательно приедем еще раз!"</p>
+                  <div class="d-flex align-items-center mt-auto pt-3 border-top border-secondary">
+                    <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background-color: #e6b97d; color: #1a211e; font-weight: bold; font-size: 1.2rem;">К</div>
+                    <div><strong style="color: #f5e6d3;">Ксения</strong><br><small class="text-muted">Подсвечник</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Слайд 3 -->
+          <div class="carousel-item">
+            <div class="row g-4 justify-content-center">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="bg-dark p-4 h-100 rounded border border-secondary">
+                  <div class="mb-3" style="color: #e6b97d; font-size: 1.5rem; line-height: 1;">🌲🌲🌲🌲🌲</div>
+                  <p class="text-muted fst-italic">"Отдыхали всей семьей в Срубе у реки. Костровая зона — это отдельная любовь. А роспись по дереву забрали как сувенир."</p>
+                  <div class="d-flex align-items-center mt-auto pt-3 border-top border-secondary">
+                    <div class="rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; background-color: #e6b97d; color: #1a211e; font-weight: bold; font-size: 1.2rem;">В</div>
+                    <div><strong style="color: #f5e6d3;">Владислав</strong><br><small class="text-muted">Сруб у реки</small></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <!-- Кнопки листания (теперь они внизу, их точно видно) -->
+        <div class="text-center mt-3">
+          <button class="btn btn-outline-secondary mx-2" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+            &larr; Назад
+          </button>
+          <button class="btn btn-outline-secondary mx-2" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+            Вперед &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Карта -->
+    <section class="container my-5">
+      <div class="card shadow-sm border-0 overflow-hidden">
+        <div class="card-header bg-primary text-white border-0 py-3">
+          <h2 class="h5 mb-0" style="color: #f5e6d3;">Как нас найти</h2>
+        </div>
+        <div class="ratio ratio-21x9">
+          <iframe 
+            src="https://yandex.ru/map-widget/v1/?ll=39.8403%2C54.7303&z=13&pt=39.8403,54.7303,pm2rdm" 
+            width="100%" 
+            height="100%" 
+            frameborder="0" 
+            allowfullscreen="true" 
+            style="filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(90%);">
+          </iframe>
+        </div>
+        <div class="card-body bg-dark text-light border-top border-secondary">
+          <p class="mb-0"><strong>Адрес:</strong> Рязанский район, Солотчинское шоссе, 13-й километр, 25</p>
+          <p class="mb-0 text-muted small">Координаты: 54.7303, 39.8403</p>
         </div>
       </div>
     </section>
   </main>
 
   <!-- Подвал -->
-  <footer class="bg-dark text-white py-4 mt-5">
+  <footer class="bg-dark text-white py-5 mt-5 border-top border-secondary">
     <div class="container">
-      <div class="row align-items-center g-3">
+      <div class="row g-4">
         <div class="col-12 col-md-6">
-          <p class="mb-0">&copy; 2026 Лесная гавань. Учебный проект.</p>
+          <h5 class="text-warning mb-3" style="color: #e6b97d !important;">Wood & Resin</h5>
+          <p class="text-muted small">Лесная эко-мастерская и глэмпинг. Место, где природа встречается с творчеством.</p>
+          <p class="mb-0 text-muted small">&copy; 2026 Учебный проект.</p>
         </div>
         <div class="col-12 col-md-6 text-md-end">
-          <a class="text-white text-decoration-none me-3" href="catalog.html">Домики</a>
-          <a class="text-white text-decoration-none" href="order.html">Бронирование</a>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="houses.html">Домики</a></li>
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="catalog.html">Мастер-классы</a></li>
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="gallery.html">Галерея</a></li>
+            <li><a class="text-decoration-none" style="color: #a3b8ad;" href="order.html">Бронирование</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </footer>
+
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

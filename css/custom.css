@@ -1,90 +1,196 @@
-/* ===== База ===== */
 body {
   min-height: 100vh;
+  background-color: #1e211f;
+  color: #e2e8e4;
+  cursor: default;
+  user-select: none; /* Убираем курсор везде */
 }
 
-.placeholder-box {
-  min-height: 240px;
+p, h1, h2, h3, h4, h5, h6, span, a, input, textarea, label, .card-text {
+  user-select: text;
 }
 
-/* ===== Палитра «Лесная гавань» ===== */
+/* ===== ПАЛИТРА ===== */
 :root {
-  --bs-primary: #1b4d2e;          /* тёмно-еловый */
-  --bs-primary-rgb: 27, 77, 46;
-  --bs-link-color: #1b4d2e;
-  --bs-link-hover-color: #0f331c;
+  --bs-primary: #3b5e40;
+  --bs-primary-rgb: 59, 94, 64;
+  --bs-link-color: #e6b97d;
+  --bs-link-hover-color: #cda76c;
 }
 
-/* Кнопки primary */
+/* ===== НАВИГАЦИЯ И ШАПКА ===== */
+header.bg-primary {
+  background-color: #1a211e !important; 
+  border-bottom: 1px solid #2a3b34;
+}
+
+.navbar-dark.bg-dark {
+  background-color: #121614 !important;
+  border-bottom: 1px solid #2a3b34;
+}
+
+.navbar-dark {
+  --bs-navbar-color: #a3b8ad;
+  --bs-navbar-hover-color: #e6b97d;
+  --bs-navbar-active-color: #3b5e40;
+  --bs-navbar-brand-color: #e6b97d;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(226,232,228,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ===== КНОПКИ ===== */
 .btn-primary {
-  --bs-btn-bg: #1b4d2e;
-  --bs-btn-border-color: #1b4d2e;
-  --bs-btn-hover-bg: #0f331c;
-  --bs-btn-hover-border-color: #0f331c;
-  --bs-btn-active-bg: #0a2413;
-  --bs-btn-active-border-color: #0a2413;
+  --bs-btn-bg: #3b5e40;
+  --bs-btn-border-color: #3b5e40;
+  --bs-btn-hover-bg: #4d7a54;
+  --bs-btn-hover-border-color: #4d7a54;
+  --bs-btn-active-bg: #2b462f;
   --bs-btn-color: #ffffff;
-  --bs-btn-hover-color: #ffffff;
-  --bs-btn-active-color: #ffffff;
 }
 
 .btn-outline-primary {
-  --bs-btn-color: #1b4d2e;
-  --bs-btn-border-color: #1b4d2e;
-  --bs-btn-hover-bg: #1b4d2e;
-  --bs-btn-hover-border-color: #1b4d2e;
+  --bs-btn-color: #3b5e40;
+  --bs-btn-border-color: #3b5e40;
+  --bs-btn-hover-bg: #3b5e40;
+  --bs-btn-hover-border-color: #3b5e40;
   --bs-btn-hover-color: #ffffff;
-  --bs-btn-active-bg: #0f331c;
-  --bs-btn-active-border-color: #0f331c;
-  --bs-btn-active-color: #ffffff;
 }
 
 .text-primary {
-  color: #1b4d2e !important;
+  color: #3b5e40 !important;
 }
 
-/* ===== Бежевый вместо чёрного/тёмного ===== */
-.bg-dark {
-  background-color: #d9c7a7 !important;   /* бежевый */
-  color: #2b2b2b !important;              /* тёмный текст для читаемости */
+a, button, .btn, .nav-link {
+  cursor: pointer !important; /* Возвращаем руку для ссылок */
 }
 
-/* Navbar на бежевом */
-.navbar-dark {
-  --bs-navbar-color: #2b2b2b;
-  --bs-navbar-hover-color: #1b4d2e;
-  --bs-navbar-active-color: #1b4d2e;
-  --bs-navbar-brand-color: #1b4d2e;
-  --bs-navbar-brand-hover-color: #0f331c;
-  --bs-navbar-toggler-border-color: rgba(43, 43, 43, 0.3);
+/* ===== КАРТОЧКИ (СТЕКЛО) ===== */
+.card, .bg-white {
+  background-color: rgba(26, 33, 30, 0.6) !important; 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(245, 230, 211, 0.2) !important; 
+  color: #e2e8e4 !important; 
+  box-shadow: 0 0 20px rgba(245, 230, 211, 0.15), inset 0 0 10px rgba(245, 230, 211, 0.05) !important;
+  transition: all 0.3s ease-in-out; 
 }
 
-/* Иконка мобильного меню — тёмная, чтобы была видна на бежевом */
-.navbar-dark .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(43,43,43,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.card:hover, .bg-white:hover {
+  background-color: rgba(26, 33, 30, 0.8) !important; 
+  box-shadow: 0 0 30px rgba(245, 230, 211, 0.3), inset 0 0 15px rgba(245, 230, 211, 0.1) !important;
+  transform: translateY(-4px); 
 }
 
-/* Подвал на бежевом */
+.card p, .bg-white p, .text-muted {
+  color: #a3b8ad !important; 
+}
+
+h3.h5, .card-title, h3, h5 {
+  color: #f5e6d3 !important; 
+  text-shadow: 0 0 10px rgba(245, 230, 211, 0.7), 0 0 20px rgba(245, 230, 211, 0.4) !important;
+}
+
+/* ===== КАРТИНКИ В КАРТОЧКАХ ===== */
+.card-img-top {
+  height: 450px !important; 
+  object-fit: cover !important; 
+  width: 100%;
+}
+
+/* ===== ТАБЛИЦЫ ===== */
+.table {
+  --bs-table-bg: #2a2522;
+  --bs-table-color: #e2e8e4;
+  --bs-table-striped-bg: #352e2a;
+  --bs-table-striped-color: #e2e8e4;
+  --bs-table-hover-bg: #4a3f38;
+  --bs-table-hover-color: #ffffff;
+  --bs-table-border-color: #4a3f38;
+}
+
+/* ===== АККОРДЕОН ===== */
+.accordion-item {
+  background-color: #2a2522 !important;
+  border: 1px solid #4a3f38 !important;
+}
+
+.accordion-button {
+  background-color: #2a2522 !important;
+  color: #f5e6d3 !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #3b5e40 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+/* ===== ПОДВАЛ ===== */
 footer.bg-dark {
-  color: #2b2b2b !important;
+  background-color: #121614 !important;
+  border-top: 1px solid #2a3b34;
 }
 
 footer .text-white {
-  color: #2b2b2b !important;
+  color: #a3b8ad !important;
 }
 
 footer a {
-  color: #1b4d2e !important;
-  text-decoration: none;
+  color: #e6b97d !important;
 }
 
 footer a:hover {
-  color: #0f331c !important;
-  text-decoration: underline;
+  color: #f5d6a8 !important;
 }
 
-/* Активный пункт меню */
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #1b4d2e;
-  font-weight: 600;
+/* ===== ЗАГОЛОВКИ ===== */
+h2, h2.display-5, header h1 {
+  color: #eeeae5 !important; 
+  text-shadow: 0 0 10px rgba(232, 216, 195, 0.6), 0 0 20px rgba(232, 216, 195, 0.3) !important;
+}
+
+/* ===== КАРУСЕЛИ ===== */
+.carousel-inner {
+  height: 400px; 
+  border-top-left-radius: var(--bs-border-radius);
+  border-top-right-radius: var(--bs-border-radius);
+}
+
+.carousel-item, .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; 
+}
+
+/* ===== ФОРМЫ ===== */
+.form-control, .form-select {
+  background-color: #1a211e !important;
+  border: 1px solid #4a3f38 !important;
+  color: #e2e8e4 !important;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #1a211e !important;
+  border-color: #3b5e40 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 0 0.25rem rgba(59, 94, 64, 0.25) !important;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.form-control::placeholder {
+  color: #6c757d !important;
+}
+
+/* ===== КАРТА ===== */
+.ratio iframe {
+  border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
 }

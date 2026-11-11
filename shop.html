@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин изделий – Wood & Resin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="houses.html">Домики</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Мастер-классы</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="shop.html">Магазин</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Бронирование</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Баннер индивидуального заказа -->
+  <div class="container mt-5">
+    <div class="card border-0 shadow-lg overflow-hidden" style="background: linear-gradient(135deg, #2a2522 0%, #1a211e 100%); border-left: 5px solid #e6b97d !important;">
+      <div class="card-body p-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="mb-3 mb-md-0">
+          <h2 class="h4 mb-2" style="color: #f5e6d3; text-shadow: 0 0 10px rgba(245,230,211,0.3);">Не нашли нужное изделие?</h2>
+          <p class="mb-0 text-muted">Мы создаем изделия на заказ по вашим размерам и эскизам. Посмотрите наши работы или обсудите свою идею!</p>
+        </div>
+        <div class="d-flex flex-column flex-sm-row gap-2 mt-3 mt-md-0">
+          <!-- Ссылка на новую галерею -->
+          <a href="custom-gallery.html" class="btn btn-outline-primary px-4" style="border-color: #e6b97d; color: #e6b97d;">Галерея работ</a>
+          <!-- Кнопка обсуждения -->
+          <button class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#customOrderModal" style="background-color: #3b5e40; border: none;">Обсудить заказ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="container my-5">
+    <div class="alert text-light border border-secondary mb-5" role="alert" style="background-color: #2a2522;">
+      Готовые изделия ручной работы. У каждого товара есть уникальный номер (Артикул) — укажите его при оформлении.
+    </div>
+    
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5">
+      <h1 class="h2 mb-3 mb-md-0" style="color: #f5e6d3; text-shadow: 0 0 10px rgba(245,230,211,0.5);">Магазин изделий</h1>
+    </div>
+
+    <div class="row g-4">
+      
+      <!-- Товар 1: Обеденный стол -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <!-- Убедись, что файл называется stolmagaz.png и лежит в images -->
+          <img src="images/stolmagaz.jpg" class="card-img-top" alt="Обеденный стол" onerror="this.src='https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5 mb-0">Обеденный стол</h2>
+              <span class="badge bg-success">Арт. 1</span>
+            </div>
+            <p class="card-text text-muted">Большой обеденный стол из массива с заливкой эпоксидной смолой.</p>
+            <p class="fw-bold fs-5 mt-auto" style="color: #e6b97d;">100 000 руб.</p>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" onclick="document.getElementById('buyProductNumber').value = 'Арт. 1 (Обеденный стол)';">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Товар 2: Журнальный столик 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/stol4.jpg" class="card-img-top" alt="Журнальный столик" onerror="this.src='https://images.unsplash.com/photo-1532372320572-cda25653a26d?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5 mb-0">Журнальный столик</h2>
+              <span class="badge bg-success">Арт. 2</span>
+            </div>
+            <p class="card-text text-muted">Компактный столик для гостиной с эффектом лесного озера.</p>
+            <p class="fw-bold fs-5 mt-auto" style="color: #e6b97d;">15 000 руб.</p>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" onclick="document.getElementById('buyProductNumber').value = 'Арт. 2 (Журнальный столик)';">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Товар 3: Журнальный столик 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/stolik2.jpg" class="card-img-top" alt="Журнальный столик 2" onerror="this.src='https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5 mb-0">Журнальный столик (модель 2)</h2>
+              <span class="badge bg-success">Арт. 3</span>
+            </div>
+            <p class="card-text text-muted">Столик с необычной формой слэба и глубоким синим океаном.</p>
+            <p class="fw-bold fs-5 mt-auto" style="color: #e6b97d;">30 000 руб.</p>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" onclick="document.getElementById('buyProductNumber').value = 'Арт. 3 (Журнальный столик 2)';">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Товар 4: Часы -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/часымагаз.jpg" class="card-img-top" alt="Часы" onerror="this.src='https://images.unsplash.com/photo-1507646870364-27a4bfbd4c27?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5 mb-0">Часы из смолы</h2>
+              <span class="badge bg-success">Арт. 4</span>
+            </div>
+            <p class="card-text text-muted">Настенные часы с кристаллизованной смолой. Диаметр 40 см.</p>
+            <p class="fw-bold fs-5 mt-auto" style="color: #e6b97d;">50 000 руб.</p>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" onclick="document.getElementById('buyProductNumber').value = 'Арт. 4 (Часы из смолы)';">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Товар 5: Остров на кухню -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/остров.jpg" class="card-img-top" alt="Кухонный остров" onerror="this.src='https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5 mb-0">Остров на кухню</h2>
+              <span class="badge bg-success">Арт. 5</span>
+            </div>
+            <p class="card-text text-muted">Массивная столешница для кухонного острова с заливкой.</p>
+            <p class="fw-bold fs-5 mt-auto" style="color: #e6b97d;">150 000 руб.</p>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" onclick="document.getElementById('buyProductNumber').value = 'Арт. 5 (Остров на кухню)';">Купить</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Товар 6: ванна -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/ванная.jpg" class="card-img-top" alt="Ванна" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5 mb-0"> Ванна </h2>
+              <span class="badge bg-success">Арт. 6</span>
+            </div>
+            <p class="card-text text-muted">Эксклюзивная ванна из дерева и эпоксидной смолы.</p>
+            <p class="fw-bold fs-5 mt-auto" style="color: #e6b97d;">70 000 руб.</p>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" onclick="document.getElementById('buyProductNumber').value = 'Арт. 6 (Стильная ванна)';">Купить</button>
+          </div>
+        </div>
+      </div>
+            <!-- Товар 7: Раковина для ванной -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="images/раковина.jpg" class="card-img-top" alt="Ванна" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <h2 class="card-title h5 mb-0"> Ванна </h2>
+              <span class="badge bg-success">Арт. 7</span>
+            </div>
+            <p class="card-text text-muted">Эксклюзивная ванна из дерева и эпоксидной смолы.</p>
+            <p class="fw-bold fs-5 mt-auto" style="color: #e6b97d;">50 000 руб.</p>
+            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#buyModal" onclick="document.getElementById('buyProductNumber').value = 'Арт. 6 (Раковина для ванной)';">Купить</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- МОДАЛКА: КУПИТЬ ТОВАР -->
+  <div class="modal fade" id="buyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="background-color: rgba(26, 33, 30, 0.95); backdrop-filter: blur(15px); border: 1px solid rgba(230, 185, 125, 0.3) !important; border-radius: 15px;">
+        <div class="modal-header border-bottom border-secondary pb-3">
+          <h2 class="modal-title h4" style="color: #f5e6d3;">Оформление покупки</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="mb-3">
+              <label class="form-label" style="color: #e6b97d;">Выбранный товар</label>
+              <input type="text" id="buyProductNumber" class="form-control" readonly style="background-color: #2a2522; color: #fff; font-weight: bold;">
+            </div>
+            <div class="mb-3">
+              <label class="form-label" style="color: #e6b97d;">Ваше имя</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" style="color: #e6b97d;">Телефон</label>
+              <div class="input-group">
+                <span class="input-group-text bg-dark text-light border-secondary">+7</span>
+                <input type="tel" class="form-control border-secondary" required>
+              </div>
+            </div>
+            <!-- Стильный чекбокс для похожего товара -->
+            <div class="p-3 mb-3 rounded d-flex align-items-start" style="background-color: rgba(230, 185, 125, 0.05); border: 1px solid rgba(230, 185, 125, 0.2);">
+              <input class="form-check-input mt-1 me-3" type="checkbox" id="similarProduct" style="width: 1.2em; height: 1.2em; cursor: pointer;">
+              <label class="form-check-label" for="similarProduct" style="cursor: pointer;">
+                <span class="d-block mb-1" style="color: #e6b97d; font-weight: 600;">Хочу похожий товар</span>
+                <span class="text-muted" style="font-size: 0.85rem; line-height: 1.4;">Отметьте, если вам нужен похожий товар. Мы свяжемся с вами для обсуждения индивидуального заказа.</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-top border-secondary pt-3">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+          <button type="button" class="btn btn-primary px-4">Оформить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- МОДАЛКА: ИНДИВИДУАЛЬНЫЙ ЗАКАЗ -->
+  <div class="modal fade" id="customOrderModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg" style="background-color: rgba(26, 33, 30, 0.95); backdrop-filter: blur(15px); border: 1px solid rgba(230, 185, 125, 0.3) !important; border-radius: 15px;">
+        <div class="modal-header border-bottom border-secondary pb-3">
+          <h2 class="modal-title h4" style="color: #f5e6d3;">Индивидуальный заказ</h2>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-4">
+          <p class="text-muted mb-4">Опишите, что хотите создать, и мы свяжемся с вами для обсуждения.</p>
+          <form>
+            <div class="mb-3">
+              <label class="form-label" style="color: #e6b97d;">Имя</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" style="color: #e6b97d;">Телефон</label>
+              <div class="input-group">
+                <span class="input-group-text bg-dark text-light border-secondary">+7</span>
+                <input type="tel" class="form-control border-secondary" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" style="color: #e6b97d;">Описание идеи</label>
+              <textarea class="form-control" rows="3" placeholder="Например: хочу стол с синей смолой и вкраплениями камня..."></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer border-top border-secondary pt-3">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+          <button type="button" class="btn btn-primary px-4">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-white py-5 mt-5 border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <h5 class="text-warning mb-3" style="color: #e6b97d !important;">Wood & Resin</h5>
+          <p class="text-muted small">Лесная эко-мастерская и глэмпинг.</p>
+        </div>
+        <div class="col-12 col-md-6 text-md-end">
+          <ul class="list-unstyled">
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="houses.html">Домики</a></li>
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="catalog.html">Мастер-классы</a></li>
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="gallery.html">Галерея</a></li>
+            <li><a class="text-decoration-none" style="color: #a3b8ad;" href="order.html">Бронирование</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
