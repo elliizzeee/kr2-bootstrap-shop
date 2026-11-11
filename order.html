@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Бронирование – Wood & Resin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="houses.html">Домики</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Мастер-классы</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Бронирование</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Магазин</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="card shadow border-0">
+          <div class="card-header bg-primary text-white border-bottom border-secondary">
+            <h1 class="h4 mb-0">Бронирование отдыха</h1>
+          </div>
+          <div class="card-body p-4">
+            <div class="alert alert-info mb-4" role="alert" style="background-color: #2a2522; color: #a3b8ad; border: none;">
+              Заполните форму, чтобы забронировать домик и/или записаться на мастер-класс. Наш менеджер свяжется с вами для подтверждения.
+            </div>
+            
+            <form>
+              <h5 class="mb-3" style="color: #e6b97d;">1. Контактные данные</h5>
+              <div class="row g-3 mb-4">
+                <div class="col-12 col-md-6">
+                  <label for="order-name" class="form-label text-muted">Имя *</label>
+                  <input id="order-name" name="name" type="text" class="form-control" required>
+                </div>
+                <div class="col-12 col-md-6">
+                  <label for="order-phone" class="form-label text-muted">Телефон *</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+7</span>
+                    <input id="order-phone" name="phone" type="tel" class="form-control" placeholder="900 000-00-00" required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="order-email" class="form-label text-muted">E-mail</label>
+                  <input id="order-email" name="email" type="email" class="form-control">
+                </div>
+              </div>
+
+              <h5 class="mb-3" style="color: #e6b97d;">2. Выбор проживания</h5>
+              <div class="row g-3 mb-4">
+                <div class="col-12">
+                  <label for="order-house" class="form-label text-muted">Какой домик вам нужен?</label>
+                  <select id="order-house" name="house" class="form-select">
+                    <option selected>Выберите домик (или "Без проживания")</option>
+                    <option value="river">Сруб у реки (до 6 чел.)</option>
+                    <option value="aframe">A-frame с чаном (для двоих)</option>
+                    <option value="forest">Лесной уют (до 4 чел.)</option>
+                    <option value="none">Только мастер-класс (без проживания)</option>
+                  </select>
+                </div>
+                <div class="col-12 col-md-4">
+                  <label for="order-checkin" class="form-label text-muted">Дата заезда</label>
+                  <input id="order-checkin" name="checkin" type="date" class="form-control">
+                </div>
+                <div class="col-12 col-md-4">
+                  <label for="order-checkout" class="form-label text-muted">Дата выезда</label>
+                  <input id="order-checkout" name="checkout" type="date" class="form-control">
+                </div>
+                <div class="col-12 col-md-4">
+                  <label for="order-guests" class="form-label text-muted">Количество гостей</label>
+                  <input id="order-guests" name="guests" type="number" min="1" max="8" class="form-control" placeholder="2">
+                </div>
+              </div>
+
+              <h5 class="mb-3" style="color: #e6b97d;">3. Мастер-класс (по желанию)</h5>
+              <div class="row g-3 mb-4">
+                <div class="col-12">
+                  <label for="order-masterclass" class="form-label text-muted">Выберите занятие</label>
+                  <select id="order-masterclass" name="masterclass" class="form-select">
+                    <option selected>Не нужен / Выберите позже</option>
+                    <option value="keyholder">Ключница из смолы (3500 руб.)</option>
+                    <option value="candle">Подсвечник (от 1500 руб.)</option>
+                    <option value="notebook">Блокнот с обложкой (1500 руб.)</option>
+                    <option value="stol">Журнальный столик (15000 руб.)</option>
+                    <option value="clock">Часы из смолы (7000 руб.)</option>
+                    <option value="risunok">Роспись по дереву (1500 руб.)</option>
+                  </select>
+                </div>
+              </div>
+
+              <h5 class="mb-3" style="color: #e6b97d;">4. Дополнительно</h5>
+              <div class="row g-3 mb-4">
+                <div class="col-12">
+                  <label for="order-comment" class="form-label text-muted">Комментарий</label>
+                  <textarea id="order-comment" name="comment" class="form-control" rows="3" placeholder="Например: нужна детская кроватка, allergies и т.д."></textarea>
+                </div>
+                <div class="col-12 mt-3">
+                  <div class="form-check">
+                    <input id="order-agree" class="form-check-input" type="checkbox" required>
+                    <label class="form-check-label text-muted" for="order-agree">
+                      Я согласен на обработку персональных данных *
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3 mt-4">
+                <button class="btn btn-primary btn-lg" type="submit">Отправить заявку</button>
+                <button class="btn btn-outline-secondary btn-lg" type="reset">Очистить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-white py-5 mt-5 border-top border-secondary">
+    <div class="container text-center">
+      <p class="mb-0 text-muted">&copy; 2026 Wood & Resin. Учебный проект.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+  <!-- Скрипт для запрета прошедших дат -->
+  <script>
+    const today = new Date().toISOString().split('T')[0];
+    const checkinInput = document.getElementById('order-checkin');
+    const checkoutInput = document.getElementById('order-checkout');
+
+    if (checkinInput && checkoutInput) {
+      // Ставим минимальную дату - сегодня
+      checkinInput.min = today;
+      checkoutInput.min = today;
+
+      // Проверяем, чтобы дата выезда была позже даты заезда
+      checkinInput.addEventListener('change', function() {
+        checkoutInput.min = this.value;
+        if (checkoutInput.value && checkoutInput.value < this.value) {
+          checkoutInput.value = this.value;
+        }
+      });
+    }
+  </script>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Домики – Wood & Resin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="houses.html">Домики</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Мастер-классы</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Бронирование</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Магазин</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="text-center mb-5">
+      <h1 class="h2 fw-bold" style="color: #f5e6d3;">Отдых в лесу</h1>
+      <p class="lead text-muted">Выберите домик для незабываемых выходных на природе</p>
+    </div>
+
+    <!-- Сетка из 3 колонок -->
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Домик 1: Сруб у реки -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div id="carouselHouse1" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/dom1.png" class="d-block w-100 rounded-top" alt="Сруб у реки">
+              </div>
+              <div class="carousel-item">
+                <img src="images/dom1.1.jpg" class="d-block w-100 rounded-top" alt="Доп фото 1.1">
+              </div>
+              <div class="carousel-item">
+                <img src="images/dom1.2.jpg" class="d-block w-100 rounded-top" alt="Доп фото 1.2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHouse1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHouse1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5 mb-3">Сруб у реки</h2>
+            <p class="text-muted small mb-3">Атмосферный деревянный дом прямо на берегу. Идеально для компаний и семей.</p>
+            <ul class="list-unstyled text-muted small mb-3">
+              <li>👨‍👩‍👧‍👦 До 6 человек</li>
+              <li>🔥 Костровая зона с креслами</li>
+            </ul>
+            <p class="fw-bold fs-5 mt-auto mb-3">8 000 руб./ночь</p>
+            <a class="btn btn-primary w-100" href="order.html">Забронировать</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Домик 2: A-frame с чаном -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div id="carouselHouse2" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/dom.2.1.png" class="d-block w-100 rounded-top" alt="A-frame с чаном">
+              </div>
+              <div class="carousel-item">
+                <img src="images/dom2.png" class="d-block w-100 rounded-top" alt="Доп фото 2.1">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHouse2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHouse2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5 mb-3">A-frame с чаном</h2>
+            <p class="text-muted small mb-3">Стильный треугольный домик с панорамными окнами и горячим купелем.</p>
+            <ul class="list-unstyled text-muted small mb-3">
+              <li>❤️ Для двоих</li>
+              <li>🧖‍♂️ Горячий чан на дровах</li>
+            </ul>
+            <p class="fw-bold fs-5 mt-auto mb-3">5 000 руб./ночь</p>
+            <a class="btn btn-primary w-100" href="order.html">Забронировать</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Домик 3: Лесной уют (НОВЫЙ) -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <div id="carouselHouse3" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/dom3.jpg" class="d-block w-100 rounded-top" alt="Домик у леса">
+              </div>
+              <div class="carousel-item">
+                <img src="images/dom3.1.jpg" class="d-block w-100 rounded-top" alt="Доп фото 3.1">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHouse3" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselHouse3" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5 mb-3">Лесной уют</h2>
+            <p class="text-muted small mb-3">Уютное место для тех, кто хочет уединения и тишины в окружении сосен.</p>
+            <ul class="list-unstyled text-muted small mb-3">
+              <li>👨‍👩‍👧 До 9 человек</li>
+              <li>🌲 Вид на лес</li>
+            </ul>
+            <p class="fw-bold fs-5 mt-auto mb-3">10 000 руб./ночь</p>
+            <a class="btn btn-primary w-100" href="order.html">Забронировать</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container text-center">
+      <p class="mb-0 text-muted">&copy; 2026 Wood & Resin. Учебный проект.</p>
+    </div>
+  </footer>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
