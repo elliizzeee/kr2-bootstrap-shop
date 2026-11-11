@@ -194,3 +194,23 @@ h2, h2.display-5, header h1 {
 .ratio iframe {
   border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
 }
+/* ===== Защита от копирования ===== */
+body {
+  -webkit-user-select: none; /* Запрет выделения текста */
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Разрешаем ввод в формах */
+input, textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Водяной знак на картинках */
+.card-img-top, .gallery-item img {
+  position: relative;
+}
