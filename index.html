@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wood & Resin — Лесная мастерская и глэмпинг</title>
+  <!-- Favicon (иконка для вкладки браузера) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌲</text></svg>">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/custom.css">
 </head>
@@ -18,8 +20,20 @@
   </header>
 
   <!-- Навигация -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
+      <!-- ЛОГОТИП -->
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#e6b97d" class="me-2" viewBox="0 0 24 24">
+          <path d="M7 21c-2.5 0-5-2-5-5 0-5.5 7-11 7-11s-1 5.5-1 11c0 2-1 5-1 5z" opacity="0.7"/>
+          <path d="M12 22c-3 0-6-2.5-6-6 0-7 8-14 8-14s3 7.5 3 14c0 3-2 6-5 6z"/>
+          <path d="M17 21c2.5 0 5-2 5-5 0-5.5-7-11-7-11s1 5.5 1 11c0 2 1 5 1 5z" opacity="0.7"/>
+        </svg>
+        <span style="font-weight: 700; letter-spacing: 1px; font-size: 1.3rem; color: #e6b97d; text-shadow: 0 0 8px rgba(230,185,125,0.5);">
+          Wood & Resin
+        </span>
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -29,7 +43,6 @@
           <li class="nav-item"><a class="nav-link" href="houses.html">Домики</a></li>
           <li class="nav-item"><a class="nav-link" href="catalog.html">Мастер-классы</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
-          <li class="nav-item"><a class="nav-link" href="order.html">Бронирование</a></li>
           <li class="nav-item"><a class="nav-link" href="shop.html">Магазин</a></li>
         </ul>
       </div>
@@ -46,6 +59,7 @@
             Приезжайте на выходные в наши уютные домики, дышите свежим воздухом и создавайте уникальные изделия из дерева и эпоксидной смолы на авторских мастер-классах
           </p>
           <a class="btn btn-primary btn-lg mt-3" href="catalog.html">Выбрать мастер-класс</a>
+          <a class="btn btn-outline-primary btn-lg mt-3 ms-2" href="order.html">Забронировать домик</a>
         </div>
         <div class="col-12 col-lg-6">
           <img src="images/photo1.jpg" class="img-fluid rounded shadow-lg border border-secondary" alt="Лесная мастерская" style="object-fit: cover; width: 100%; max-height: 600px;" onerror="this.src='https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1000&auto=format&fit=crop'">
@@ -78,7 +92,7 @@
       </div>
     </section>
 
-    <!-- Популярные мастер-классы (3 штуки) -->
+    <!-- Популярные мастер-классы -->
     <section class="container my-5">
       <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="mb-0">Популярные мастер-классы</h2>
@@ -86,7 +100,6 @@
       </div>
       
       <div class="row g-4 justify-content-center">
-        <!-- Карточка 1: Журнальный столик -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm">
             <img src="images/stol1.jpg" class="card-img-top" alt="Столик" onerror="this.src='https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc?q=80&w=600'">
@@ -100,8 +113,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Карточка 2: Часы -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm">
             <img src="images/clock.jpg" class="card-img-top" alt="Часы" onerror="this.src='https://images.unsplash.com/photo-1507646870364-27a4bfbd4c27?q=80&w=600'">
@@ -115,8 +126,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Карточка 3: Роспись по дереву -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm">
             <img src="images/risunok1.jpg" class="card-img-top" alt="Роспись" onerror="this.src='https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=600'">
@@ -132,15 +141,14 @@
         </div>
       </div>
     </section>
-    <!-- Отзывы (Карусель) -->
+
+    <!-- Отзывы -->
     <section class="container my-5">
       <h2 class="text-center mb-5" style="color: #f5e6d3; text-shadow: 0 0 10px rgba(245,230,211,0.5);">Отзывы наших гостей</h2>
       
-      <!-- Убрали свечение у карточек, заменив .card на .bg-dark -->
       <div id="reviewsCarousel" class="carousel slide" data-bs-ride="false">
         <div class="carousel-inner pb-5">
           
-          <!-- Слайд 1 -->
           <div class="carousel-item active">
             <div class="row g-4 justify-content-center">
               <div class="col-12 col-md-6 col-lg-4">
@@ -176,7 +184,6 @@
             </div>
           </div>
 
-          <!-- Слайд 2 -->
           <div class="carousel-item">
             <div class="row g-4 justify-content-center">
               <div class="col-12 col-md-6 col-lg-4">
@@ -212,7 +219,6 @@
             </div>
           </div>
 
-          <!-- Слайд 3 -->
           <div class="carousel-item">
             <div class="row g-4 justify-content-center">
               <div class="col-12 col-md-6 col-lg-4">
@@ -230,7 +236,6 @@
 
         </div>
         
-        <!-- Кнопки листания (теперь они внизу, их точно видно) -->
         <div class="text-center mt-3">
           <button class="btn btn-outline-secondary mx-2" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
             &larr; Назад
@@ -242,64 +247,92 @@
       </div>
     </section>
 
-    <!-- Карта -->
+    <!-- Карта и Контакты -->
     <section class="container my-5">
       <div class="card shadow-sm border-0 overflow-hidden">
         <div class="card-header bg-primary text-white border-0 py-3">
           <h2 class="h5 mb-0" style="color: #f5e6d3;">Как нас найти</h2>
         </div>
         <div class="ratio ratio-21x9">
-          <iframe 
-            src="https://yandex.ru/map-widget/v1/?ll=39.8403%2C54.7303&z=13&pt=39.8403,54.7303,pm2rdm" 
-            width="100%" 
-            height="100%" 
-            frameborder="0" 
-            allowfullscreen="true" 
-            style="filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(90%);">
-          </iframe>
+          <iframe src="https://yandex.ru/map-widget/v1/?ll=39.8403%2C54.7303&z=13&pt=39.8403,54.7303,pm2rdm" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(90%);"></iframe>
         </div>
         <div class="card-body bg-dark text-light border-top border-secondary">
-          <p class="mb-0"><strong>Адрес:</strong> Рязанский район, Солотчинское шоссе, 13-й километр, 25</p>
-          <p class="mb-0 text-muted small">Координаты: 54.7303, 39.8403</p>
+          <div class="row text-center text-md-start">
+            <div class="col-12 col-md-4 mb-2 mb-md-0">
+              <strong style="color: #e6b97d;">📍 Адрес:</strong><br><span class="text-muted small">Рязанский район, Солотчинское шоссе, 13-й км, 25</span>
+            </div>
+            <div class="col-12 col-md-4 mb-2 mb-md-0">
+              <strong style="color: #e6b97d;">📞 Телефон:</strong><br><a href="tel:+79000000000" class="text-muted small text-decoration-none">+7 (900) 000-00-00</a>
+            </div>
+            <div class="col-12 col-md-4">
+              <strong style="color: #e6b97d;">✉️ Почта:</strong><br><a href="mailto:info@woodresin.ru" class="text-muted small text-decoration-none">info@woodresin.ru</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </main>
-
-  <!-- Подвал -->
   <footer class="bg-dark text-white py-5 mt-5 border-top border-secondary">
     <div class="container">
       <div class="row g-4">
-        <div class="col-12 col-md-6">
-          <h5 class="text-warning mb-3" style="color: #e6b97d !important;">Wood & Resin</h5>
-          <p class="text-muted small">Лесная эко-мастерская и глэмпинг. Место, где природа встречается с творчеством.</p>
-          <p class="mb-0 text-muted small">&copy; 2026 Wood & Resin. Все права защищены. <br> Любое копирование материалов или идей дизайна без согласия автора запрещено.</p>
+        
+        <!-- 1. Логотип и бренд -->
+        <div class="col-12 col-md-4">
+          <a class="navbar-brand d-flex align-items-center mb-2 text-decoration-none" href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#e6b97d" class="me-2" viewBox="0 0 24 24">
+              <path d="M7 21c-2.5 0-5-2-5-5 0-5.5 7-11 7-11s-1 5.5-1 11c0 2-1 5-1 5z" opacity="0.7"/>
+              <path d="M12 22c-3 0-6-2.5-6-6 0-7 8-14 8-14s3 7.5 3 14c0 3-2 6-5 6z"/>
+              <path d="M17 21c2.5 0 5-2 5-5 0-5.5-7-11-7-11s1 5.5 1 11c0 2 1 5 1 5z" opacity="0.7"/>
+            </svg>
+            <span style="font-weight: 700; color: #e6b97d; font-size: 1.2rem;">Wood & Resin</span>
+          </a>
+          <p class="text-muted small mb-0">Лесная эко-мастерская и глэмпинг. Место, где природа встречается с творчеством.</p>
+          
+          <!-- 2026 год (с отступом) -->
+          <div class="mt-3 text-muted" style="font-size: 0.75rem; opacity: 0.7;">
+            <br>
+            &copy; 2026 Wood & Resin.<br>
+            Все права защищены.
+          </div>
         </div>
-        <div class="col-12 col-md-6 text-md-end">
-          <ul class="list-unstyled">
+
+        <!-- 2. Навигация -->
+        <div class="col-12 col-md-4">
+          <h5 class="mb-3" style="color: #e6b97d !important;">Навигация</h5>
+          <ul class="list-unstyled small">
             <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="houses.html">Домики</a></li>
             <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="catalog.html">Мастер-классы</a></li>
             <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="gallery.html">Галерея</a></li>
-            <li><a class="text-decoration-none" style="color: #a3b8ad;" href="order.html">Бронирование</a></li>
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="shop.html">Магазин</a></li>
           </ul>
         </div>
+
+        <!-- 3. Контакты (в нужном порядке) -->
+        <div class="col-12 col-md-4">
+          <h5 class="mb-3" style="color: #e6b97d !important;">Контакты</h5>
+          <ul class="list-unstyled text-muted small">
+            <!-- 1. Адрес -->
+            <li class="mb-2">📍 <strong>Адрес:</strong> Рязанский район, Солотчинское шоссе, 13-й км, 25</li>
+            <!-- 2. Режим работы -->
+            <li class="mb-2">🕒 <strong>Режим работы:</strong> Ежедневно с 09:00 до 21:00</li>
+            <!-- 3. Телефон -->
+            <li class="mb-2">📞 <strong>Телефон:</strong> <a href="tel:+79000000000" style="color: #a3b8ad; text-decoration: none;">+7 (900) 000-00-00</a></li>
+            <!-- 4. Почта -->
+            <li class="mb-2">✉️ <strong>E-mail:</strong> <a href="mailto:info@woodresin.ru" style="color: #a3b8ad; text-decoration: none;">info@woodresin.ru</a></li>
+            <!-- 5. Соцсеть (текстом) -->
+            <li class="mb-2">✈️ <strong>Telegram:</strong> <a href="https://t.me/woodresin_studio" target="_blank" style="color: #e6b97d; text-decoration: none;">@woodresin_studio</a></li>
+          </ul>
+        </div>
+        
       </div>
     </div>
   </footer>
-
-
+  <!-- Скрипты -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- ЗАЩИТА ОТ КОПИРОВАНИЯ -->
-<script>
-  // 1. Запрет на правую кнопку мыши (контекстное меню)
-  document.addEventListener('contextmenu', event => event.preventDefault());
-
-  // 2. Запрет на горячие клавиши копирования (Ctrl+C, Ctrl+X, Ctrl+U)
-  document.addEventListener('keydown', function(event) {
-    if ((event.ctrlKey || event.metaKey) && (event.key === 'c' || event.key === 'x' || event.key === 'u')) {
-      event.preventDefault();
-    }
-  });
-</script>
+  <script src="protection.js"></script>
+  <!-- Кнопка Наверх  -->
+  <button id="scrollToTopBtn" class="btn btn-primary rounded-circle shadow-lg align-items-center justify-content-center" style="position: fixed; bottom: 30px; right: 30px; z-index: 9999; width: 55px; height: 55px; padding: 0; font-size: 1.5rem; display: none;" title="Наверх">
+    🌲
+  </button>
 </body>
 </html>

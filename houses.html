@@ -8,20 +8,34 @@
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-
+    <div class="falling-leaves">
+    <div class="leaf">🍂</div>
+    <div class="leaf">🍁</div>
+    <div class="leaf">🍂</div>
+    <div class="leaf">🍁</div>
+    <div class="leaf">🍂</div>
+    <div class="leaf">🍁</div>
+    <div class="leaf">🍂</div>
+    <div class="leaf">🍁</div>
+  </div>
   <!-- Навигация -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#e6b97d" class="me-2" viewBox="0 0 24 24">
+          <path d="M7 21c-2.5 0-5-2-5-5 0-5.5 7-11 7-11s-1 5.5-1 11c0 2-1 5-1 5z" opacity="0.7"/>
+          <path d="M12 22c-3 0-6-2.5-6-6 0-7 8-14 8-14s3 7.5 3 14c0 3-2 6-5 6z"/>
+          <path d="M17 21c2.5 0 5-2 5-5 0-5.5-7-11-7-11s1 5.5 1 11c0 2 1 5 1 5z" opacity="0.7"/>
+        </svg>
+        <span style="font-weight: 700; letter-spacing: 1px; font-size: 1.3rem; color: #e6b97d; text-shadow: 0 0 8px rgba(230,185,125,0.5);">Wood & Resin</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="houses.html">Домики</a></li>
           <li class="nav-item"><a class="nav-link" href="catalog.html">Мастер-классы</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
-          <li class="nav-item"><a class="nav-link" href="order.html">Бронирование</a></li>
           <li class="nav-item"><a class="nav-link" href="shop.html">Магазин</a></li>
         </ul>
       </div>
@@ -30,111 +44,87 @@
 
   <main class="container my-5">
     <div class="text-center mb-5">
-      <h1 class="h2 fw-bold" style="color: #f5e6d3;">Отдых в лесу</h1>
+      <h1 class="h2 fw-bold" style="color: #f5e6d3; text-shadow: 0 0 10px rgba(245,230,211,0.5);">Отдых в лесу</h1>
       <p class="lead text-muted">Выберите домик для незабываемых выходных на природе</p>
     </div>
 
-    <!-- Сетка из 3 колонок -->
+    <!-- Сетка домиков (6 штук) -->
     <div class="row g-4 justify-content-center">
       
-      <!-- Домик 1: Сруб у реки -->
+      <!-- Домик 1 -->
       <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="card h-100 shadow-sm border-0">
-          <div id="carouselHouse1" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/dom1.png" class="d-block w-100 rounded-top" alt="Сруб у реки">
-              </div>
-              <div class="carousel-item">
-                <img src="images/dom1.1.jpg" class="d-block w-100 rounded-top" alt="Доп фото 1.1">
-              </div>
-              <div class="carousel-item">
-                <img src="images/dom1.2.jpg" class="d-block w-100 rounded-top" alt="Доп фото 1.2">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHouse1" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselHouse1" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-          </div>
-
+          <img src="images/dom1.png" class="card-img-top" alt="Сруб у реки" style="height: 250px; object-fit: cover;">
           <div class="card-body d-flex flex-column">
             <h2 class="card-title h5 mb-3">Сруб у реки</h2>
-            <p class="text-muted small mb-3">Атмосферный деревянный дом прямо на берегу. Идеально для компаний и семей.</p>
-            <ul class="list-unstyled text-muted small mb-3">
-              <li>👨‍👩‍👧‍👦 До 6 человек</li>
-              <li>🔥 Костровая зона с креслами</li>
-            </ul>
-            <p class="fw-bold fs-5 mt-auto mb-3">8 000 руб./ночь</p>
-            <a class="btn btn-primary w-100" href="order.html">Забронировать</a>
+            <p class="text-muted small mb-3">Атмосферный деревянный дом прямо на берегу. До 6 человек.</p>
+            <p class="fw-bold fs-5 mt-auto mb-3" style="color: #e6b97d;">8 000 руб./ночь</p>
+            <a class="btn btn-primary w-100" href="house-river.html">Подробнее</a>
           </div>
         </div>
       </div>
 
-      <!-- Домик 2: A-frame с чаном -->
+      <!-- Домик 2 -->
       <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="card h-100 shadow-sm border-0">
-          <div id="carouselHouse2" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/dom.2.1.png" class="d-block w-100 rounded-top" alt="A-frame с чаном">
-              </div>
-              <div class="carousel-item">
-                <img src="images/dom2.png" class="d-block w-100 rounded-top" alt="Доп фото 2.1">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHouse2" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselHouse2" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-          </div>
-
+          <img src="images/dom.2.1.png" class="card-img-top" alt="A-frame" style="height: 250px; object-fit: cover;">
           <div class="card-body d-flex flex-column">
             <h2 class="card-title h5 mb-3">A-frame с чаном</h2>
-            <p class="text-muted small mb-3">Стильный треугольный домик с панорамными окнами и горячим купелем.</p>
-            <ul class="list-unstyled text-muted small mb-3">
-              <li>❤️ Для двоих</li>
-              <li>🧖‍♂️ Горячий чан на дровах</li>
-            </ul>
-            <p class="fw-bold fs-5 mt-auto mb-3">5 000 руб./ночь</p>
-            <a class="btn btn-primary w-100" href="order.html">Забронировать</a>
+            <p class="text-muted small mb-3">Треугольный домик с горячим купелем. Для двоих.</p>
+            <p class="fw-bold fs-5 mt-auto mb-3" style="color: #e6b97d;">5 000 руб./ночь</p>
+            <a class="btn btn-primary w-100" href="house-aframe.html">Подробнее</a>
           </div>
         </div>
       </div>
 
-      <!-- Домик 3: Лесной уют (НОВЫЙ) -->
+      <!-- Домик 3 -->
       <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="card h-100 shadow-sm border-0">
-          <div id="carouselHouse3" class="carousel slide" data-bs-ride="false">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="images/dom3.jpg" class="d-block w-100 rounded-top" alt="Домик у леса">
-              </div>
-              <div class="carousel-item">
-                <img src="images/dom3.1.jpg" class="d-block w-100 rounded-top" alt="Доп фото 3.1">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHouse3" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselHouse3" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-          </div>
-
+          <img src="images/dom3.jpg" class="card-img-top" alt="Лесной уют" style="height: 250px; object-fit: cover;">
           <div class="card-body d-flex flex-column">
             <h2 class="card-title h5 mb-3">Лесной уют</h2>
-            <p class="text-muted small mb-3">Уютное место для тех, кто хочет уединения и тишины в окружении сосен.</p>
-            <ul class="list-unstyled text-muted small mb-3">
-              <li>👨‍👩‍👧 До 9 человек</li>
-              <li>🌲 Вид на лес</li>
-            </ul>
-            <p class="fw-bold fs-5 mt-auto mb-3">10 000 руб./ночь</p>
-            <a class="btn btn-primary w-100" href="order.html">Забронировать</a>
+            <p class="text-muted small mb-3">Уединение в сосновом бору. До 9 человек.</p>
+            <p class="fw-bold fs-5 mt-auto mb-3" style="color: #e6b97d;">10 000 руб./ночь</p>
+            <a class="btn btn-primary w-100" href="house-forest.html">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Домик 4 (Картинка dom4.jpg) -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/dom6.jpg" class="card-img-top" alt="Кедр" style="height: 250px; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5 mb-3">Кедр</h2>
+            <p class="text-muted small mb-3">Большой дом с сауной и террасой. До 8 человек.</p>
+            <p class="fw-bold fs-5 mt-auto mb-3" style="color: #e6b97d;">12 000 руб./ночь</p>
+            <a class="btn btn-primary w-100" href="house-kedr.html">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Домик 5 (Картинка dom5.jpg) -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/dom5.jpg" class="card-img-top" alt="Хвоя" style="height: 250px; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5 mb-3">Хвоя</h2>
+            <p class="text-muted small mb-3">Уютный домик с панорамным остеклением. До 5 человек.</p>
+            <p class="fw-bold fs-5 mt-auto mb-3" style="color: #e6b97d;">7 000 руб./ночь</p>
+            <a class="btn btn-primary w-100" href="house-khvoya.html">Подробнее</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Домик 6 (Картинка dom6.jpg) -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+          <img src="images/dom4.jpg" class="card-img-top" alt="Мох" style="height: 250px; object-fit: cover;" onerror="this.src='https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=600'">
+          <div class="card-body d-flex flex-column">
+            <h2 class="card-title h5 mb-3">Мох</h2>
+            <p class="text-muted small mb-3">Компактный домик для двоих с видом на лес.</p>
+            <p class="fw-bold fs-5 mt-auto mb-3" style="color: #e6b97d;">5 500 руб./ночь</p>
+            <a class="btn btn-primary w-100" href="house-mokh.html">Подробнее</a>
           </div>
         </div>
       </div>
@@ -142,13 +132,61 @@
     </div>
   </main>
 
-  <!-- Подвал -->
-  <footer class="bg-dark text-white py-4 mt-5">
-    <div class="container text-center">
-      <p class="mb-0 text-muted">&copy; 2026 Wood & Resin. Учебный проект.</p>
+  <footer class="bg-dark text-white py-5 mt-5 border-top border-secondary">
+    <div class="container">
+      <div class="row g-4">
+        
+        <!-- 1. Логотип и бренд -->
+        <div class="col-12 col-md-4">
+          <a class="navbar-brand d-flex align-items-center mb-2 text-decoration-none" href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#e6b97d" class="me-2" viewBox="0 0 24 24">
+              <path d="M7 21c-2.5 0-5-2-5-5 0-5.5 7-11 7-11s-1 5.5-1 11c0 2-1 5-1 5z" opacity="0.7"/>
+              <path d="M12 22c-3 0-6-2.5-6-6 0-7 8-14 8-14s3 7.5 3 14c0 3-2 6-5 6z"/>
+              <path d="M17 21c2.5 0 5-2 5-5 0-5.5-7-11-7-11s1 5.5 1 11c0 2 1 5 1 5z" opacity="0.7"/>
+            </svg>
+            <span style="font-weight: 700; color: #e6b97d; font-size: 1.2rem;">Wood & Resin</span>
+          </a>
+          <p class="text-muted small mb-0">Лесная эко-мастерская и глэмпинг. Место, где природа встречается с творчеством.</p>
+          
+          <!-- 2026 год (с отступом) -->
+          <div class="mt-3 text-muted" style="font-size: 0.75rem; opacity: 0.7;">
+            <br>
+            &copy; 2026 Wood & Resin.<br>
+            Все права защищены.
+          </div>
+        </div>
+
+        <!-- 2. Навигация -->
+        <div class="col-12 col-md-4">
+          <h5 class="mb-3" style="color: #e6b97d !important;">Навигация</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="houses.html">Домики</a></li>
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="catalog.html">Мастер-классы</a></li>
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="gallery.html">Галерея</a></li>
+            <li class="mb-2"><a class="text-decoration-none" style="color: #a3b8ad;" href="shop.html">Магазин</a></li>
+          </ul>
+        </div>
+
+        <!-- 3. Контакты (в нужном порядке) -->
+        <div class="col-12 col-md-4">
+          <h5 class="mb-3" style="color: #e6b97d !important;">Контакты</h5>
+          <ul class="list-unstyled text-muted small">
+            <!-- 1. Адрес -->
+            <li class="mb-2">📍 <strong>Адрес:</strong> Рязанский район, Солотчинское шоссе, 13-й км, 25</li>
+            <!-- 2. Режим работы -->
+            <li class="mb-2">🕒 <strong>Режим работы:</strong> Ежедневно с 09:00 до 21:00</li>
+            <!-- 3. Телефон -->
+            <li class="mb-2">📞 <strong>Телефон:</strong> <a href="tel:+79000000000" style="color: #a3b8ad; text-decoration: none;">+7 (900) 000-00-00</a></li>
+            <!-- 4. Почта -->
+            <li class="mb-2">✉️ <strong>E-mail:</strong> <a href="mailto:info@woodresin.ru" style="color: #a3b8ad; text-decoration: none;">info@woodresin.ru</a></li>
+            <!-- 5. Соцсеть (текстом) -->
+            <li class="mb-2">✈️ <strong>Telegram:</strong> <a href="https://t.me/woodresin_studio" target="_blank" style="color: #e6b97d; text-decoration: none;">@woodresin_studio</a></li>
+          </ul>
+        </div>
+        
+      </div>
     </div>
   </footer>
-  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

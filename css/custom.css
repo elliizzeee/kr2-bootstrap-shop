@@ -214,3 +214,83 @@ input, textarea {
 .card-img-top, .gallery-item img {
   position: relative;
 }
+
+/* ===== ПАДАЮЩИЕ ЛИСТЬЯ ===== */
+.falling-leaves {
+  position: fixed; /* Фиксируем на фоне экрана */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Чтобы листья не мешали кликать по кнопкам */
+  z-index: 9999; /* Поверх всего контента */
+  overflow: hidden; /* Скрываем листья, которые улетели за экран */
+}
+
+.leaf {
+  position: absolute;
+  top: -50px; /* Начинают падать сверху за пределами экрана */
+  font-size: 2rem; /* Размер листьев */
+  opacity: 0.8;
+  animation-name: fall;
+  animation-duration: 10s; 
+  animation-iteration-count: infinite; /* Бесконечный цикл */
+  animation-timing-function: linear;
+}
+
+/* Настраиваем разную скорость и позицию для каждого листа */
+.leaf:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+.leaf:nth-child(2) { left: 25%; animation-duration: 12s; animation-delay: 2s; }
+.leaf:nth-child(3) { left: 40%; animation-duration: 10s; animation-delay: 4s; }
+.leaf:nth-child(4) { left: 55%; animation-duration: 14s; animation-delay: 1s; }
+.leaf:nth-child(5) { left: 70%; animation-duration: 9s; animation-delay: 5s; }
+.leaf:nth-child(6) { left: 85%; animation-duration: 11s; animation-delay: 3s; }
+.leaf:nth-child(7) { left: 95%; animation-duration: 15s; animation-delay: 0s; }
+.leaf:nth-child(8) { left: 5%; animation-duration: 13s; animation-delay: 6s; }
+
+/* Сама анимация */
+@keyframes fall {
+  0% {
+    top: -50px;
+    transform: translateX(0) rotate(0deg); 
+  }
+  50% {
+    transform: translateX(50px) rotate(180deg); /* Покачивание вправо */
+  }
+  100% {
+    top: 105%; /* Улетает вниз */
+    transform: translateX(-50px) rotate(360deg); /* Покачивание влево и оборот */
+  }
+  /* ===== КРАСИВЫЕ ХЛЕБНЫЕ КРОШКИ ===== */
+.breadcrumb {
+  background-color: rgba(26, 33, 30, 0.6);
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(230, 185, 125, 0.2);
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumb-item a {
+  color: #e6b97d !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: #ffffff !important;
+}
+
+/* Разделитель (стрелочка) */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "→";
+  color: #a3b8ad;
+  padding: 0 10px;
+}
+
+/* Текущая страница */
+.breadcrumb-item.active {
+  color: #a3b8ad !important;
+  font-weight: 600;
+}
+}
