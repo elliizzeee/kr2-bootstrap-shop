@@ -42,8 +42,16 @@
     
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5">
       <h1 class="h2 mb-3 mb-md-0" style="color: #f5e6d3; text-shadow: 0 0 10px rgba(245,230,211,0.5);">Наши мастер-классы</h1>
-      <a class="btn btn-outline-primary" href="order.html">Забронировать домик</a>
+
+      <!-- Кнопка рандомайзера -->
+      <div class="d-flex gap-2">
+        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#randomizerModal" style="border-color: #e6b97d; color: #e6b97d;">
+          🎲 Не можете выбрать мастер класс?
+        </button>
+        <a class="btn btn-outline-primary" href="order.html">Забронировать домик</a>
+      </div>
     </div>
+
 
     <div class="row g-4">
       
@@ -216,8 +224,7 @@
           <!-- 2026 год (с отступом) -->
           <div class="mt-3 text-muted" style="font-size: 0.75rem; opacity: 0.7;">
             <br>
-            &copy; 2026 Wood & Resin.<br>
-            Все права защищены.
+            &copy; 2026 Wood & Resin. Все права защищены.<br>
           </div>
         </div>
 
@@ -253,5 +260,82 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const rouletteModal = document.getElementById('randomizerModal');
+      const rouletteImage = document.getElementById('rouletteImage');
+      const rouletteTitle = document.getElementById('rouletteTitle');
+      const rouletteLink = document.getElementById('rouletteLink');
+      
+      if (!rouletteModal) return;
+
+      const masterclasses = [
+        { title: 'Ключница из смолы', img: 'images/key.jpg', url: 'product-key.html' },
+        { title: 'Подсвечник', img: 'images/svechi2.jpg', url: 'product-candle.html' },
+        { title: 'Блокнот с обложкой', img: 'images/book.jpg', url: 'product-notebook.html' },
+        { title: 'Журнальный столик', img: 'images/stol1.jpg', url: 'product-stol.html' },
+        { title: 'Часы из смолы', img: 'images/clock.jpg', url: 'product-clock.html' },
+        { title: 'Роспись по дереву', img: 'images/risunok1.jpg', url: 'product-risunok.html' }
+      ];
+
+      let interval;
+
+      rouletteModal.addEventListener('show.bs.modal', function () {
+        rouletteLink.style.display = 'none';
+        rouletteTitle.innerText = '...';
+        let counter = 0;
+        const totalRounds = 15;
+
+        interval = setInterval(() => {
+          const randomItem = masterclasses[Math.floor(Math.random() * masterclasses.length)];
+          rouletteImage.src = randomItem.img;
+          rouletteTitle.innerText = randomItem.title;
+          counter++;
+
+          if (counter >= totalRounds) {
+            clearInterval(interval);
+            const finalItem = masterclasses[Math.floor(Math.random() * masterclasses.length)];
+            rouletteImage.style.opacity = '0';
+            setTimeout(() => {
+              rouletteImage.src = finalItem.img;
+              rouletteTitle.innerText = finalItem.title;
+              rouletteImage.style.opacity = '1';
+              rouletteLink.href = finalItem.url;
+              rouletteLink.style.display = 'block';
+            }, 300);
+          }
+        }, 100); 
+      });
+
+      rouletteModal.addEventListener('hide.bs.modal', function () {
+        clearInterval(interval);
+      });
+    });
+  </script>
+  <!-- МОДАЛКА: РАНДОМАЙЗЕР -->
+  <div class="modal fade" id="randomizerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow-lg text-center" style="background-color: rgba(26, 33, 30, 0.95); backdrop-filter: blur(15px); border: 1px solid rgba(230, 185, 125, 0.3) !important; border-radius: 15px;">
+        
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"></button>
+        </div>
+        
+        <div class="modal-body p-4">
+          <h3 class="mb-4" style="color: #f5e6d3; text-shadow: 0 0 10px rgba(245,230,211,0.5);">Ищем идеальный МК...</h3>
+          
+          <div class="d-flex justify-content-center mb-4">
+            <!-- Увеличили высоту до 400px -->
+            <img id="rouletteImage" src="images/photo1.jpg" class="img-fluid rounded shadow" alt="Рандомайзер" style="height: 400px; width: 100%; object-fit: cover; transition: opacity 0.1s;">
+          </div>
+
+          <h4 id="rouletteTitle" class="mb-3" style="color: #e6b97d;">...</h4>
+          
+          <a id="rouletteLink" href="#" class="btn btn-primary btn-lg w-100" style="display: none;">Перейти к мастер-классу</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 </body>
 </html>

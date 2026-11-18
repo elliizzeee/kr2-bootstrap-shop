@@ -1,13 +1,18 @@
+/* ===== БАЗА ===== */
 body {
   min-height: 100vh;
   background-color: #1e211f;
   color: #e2e8e4;
   cursor: default;
-  user-select: none; /* Убираем курсор везде */
+  user-select: none;
 }
 
 p, h1, h2, h3, h4, h5, h6, span, a, input, textarea, label, .card-text {
   user-select: text;
+}
+
+a, button, .btn, .nav-link {
+  cursor: pointer !important;
 }
 
 /* ===== ПАЛИТРА ===== */
@@ -62,10 +67,6 @@ header.bg-primary {
   color: #3b5e40 !important;
 }
 
-a, button, .btn, .nav-link {
-  cursor: pointer !important; /* Возвращаем руку для ссылок */
-}
-
 /* ===== КАРТОЧКИ (СТЕКЛО) ===== */
 .card, .bg-white {
   background-color: rgba(26, 33, 30, 0.6) !important; 
@@ -94,9 +95,15 @@ h3.h5, .card-title, h3, h5 {
 
 /* ===== КАРТИНКИ В КАРТОЧКАХ ===== */
 .card-img-top {
-  height: 450px !important; 
-  object-fit: cover !important; 
+  height: 300px !important; 
+  object-fit: cover !important;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .card-img-top {
+    height: 400px !important;
+  }
 }
 
 /* ===== ТАБЛИЦЫ ===== */
@@ -168,6 +175,16 @@ h2, h2.display-5, header h1 {
   object-fit: cover; 
 }
 
+/* ===== СПЕЦИАЛЬНО ДЛЯ A-FRAME (Карусель) ===== */
+#carouselAframe .carousel-inner {
+  height: 1167px !important; /* Увеличиваем саму карусель */
+}
+
+#carouselAframe .carousel-item img {
+  height: 100% !important; /* Картинка заполняет всю высоту */
+  object-fit: cover !important;
+}
+
 /* ===== ФОРМЫ ===== */
 .form-control, .form-select {
   background-color: #1a211e !important;
@@ -194,74 +211,8 @@ h2, h2.display-5, header h1 {
 .ratio iframe {
   border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
 }
-/* ===== Защита от копирования ===== */
-body {
-  -webkit-user-select: none; /* Запрет выделения текста */
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
-/* Разрешаем ввод в формах */
-input, textarea {
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
-}
-
-/* Водяной знак на картинках */
-.card-img-top, .gallery-item img {
-  position: relative;
-}
-
-/* ===== ПАДАЮЩИЕ ЛИСТЬЯ ===== */
-.falling-leaves {
-  position: fixed; /* Фиксируем на фоне экрана */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none; /* Чтобы листья не мешали кликать по кнопкам */
-  z-index: 9999; /* Поверх всего контента */
-  overflow: hidden; /* Скрываем листья, которые улетели за экран */
-}
-
-.leaf {
-  position: absolute;
-  top: -50px; /* Начинают падать сверху за пределами экрана */
-  font-size: 2rem; /* Размер листьев */
-  opacity: 0.8;
-  animation-name: fall;
-  animation-duration: 10s; 
-  animation-iteration-count: infinite; /* Бесконечный цикл */
-  animation-timing-function: linear;
-}
-
-/* Настраиваем разную скорость и позицию для каждого листа */
-.leaf:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
-.leaf:nth-child(2) { left: 25%; animation-duration: 12s; animation-delay: 2s; }
-.leaf:nth-child(3) { left: 40%; animation-duration: 10s; animation-delay: 4s; }
-.leaf:nth-child(4) { left: 55%; animation-duration: 14s; animation-delay: 1s; }
-.leaf:nth-child(5) { left: 70%; animation-duration: 9s; animation-delay: 5s; }
-.leaf:nth-child(6) { left: 85%; animation-duration: 11s; animation-delay: 3s; }
-.leaf:nth-child(7) { left: 95%; animation-duration: 15s; animation-delay: 0s; }
-.leaf:nth-child(8) { left: 5%; animation-duration: 13s; animation-delay: 6s; }
-
-/* Сама анимация */
-@keyframes fall {
-  0% {
-    top: -50px;
-    transform: translateX(0) rotate(0deg); 
-  }
-  50% {
-    transform: translateX(50px) rotate(180deg); /* Покачивание вправо */
-  }
-  100% {
-    top: 105%; /* Улетает вниз */
-    transform: translateX(-50px) rotate(360deg); /* Покачивание влево и оборот */
-  }
-  /* ===== КРАСИВЫЕ ХЛЕБНЫЕ КРОШКИ ===== */
+/* ===== ХЛЕБНЫЕ КРОШКИ ===== */
 .breadcrumb {
   background-color: rgba(26, 33, 30, 0.6);
   padding: 12px 20px;
@@ -281,16 +232,59 @@ input, textarea {
   color: #ffffff !important;
 }
 
-/* Разделитель (стрелочка) */
 .breadcrumb-item + .breadcrumb-item::before {
   content: "→";
   color: #a3b8ad;
   padding: 0 10px;
 }
 
-/* Текущая страница */
 .breadcrumb-item.active {
   color: #a3b8ad !important;
   font-weight: 600;
 }
+
+/* ===== ПАДАЮЩИЕ ЛИСТЬЯ ===== */
+.falling-leaves {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.leaf {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem;
+  opacity: 0.8;
+  animation-name: fall;
+  animation-duration: 10s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.leaf:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+.leaf:nth-child(2) { left: 25%; animation-duration: 12s; animation-delay: 2s; }
+.leaf:nth-child(3) { left: 40%; animation-duration: 10s; animation-delay: 4s; }
+.leaf:nth-child(4) { left: 55%; animation-duration: 14s; animation-delay: 1s; }
+.leaf:nth-child(5) { left: 70%; animation-duration: 9s; animation-delay: 5s; }
+.leaf:nth-child(6) { left: 85%; animation-duration: 11s; animation-delay: 3s; }
+.leaf:nth-child(7) { left: 95%; animation-duration: 15s; animation-delay: 0s; }
+.leaf:nth-child(8) { left: 5%; animation-duration: 13s; animation-delay: 6s; }
+
+@keyframes fall {
+  0% {
+    top: -50px;
+    transform: translateX(0) rotate(0deg); 
+  }
+  50% {
+    transform: translateX(50px) rotate(180deg); 
+  }
+  100% {
+    top: 105%; 
+    transform: translateX(-50px) rotate(360deg); 
+  }
 }
